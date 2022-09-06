@@ -5,6 +5,7 @@ import './Movie.scss';
 const Movie = ({id, title, year, summary, poster, genres}) => {
     return (
         <div className='movie'>
+            <Link to='/Detail/'>
             <img src={poster} alt={title} title={title} />
             <div className='movie_data'>
                 <h3 className='movie_title'>{title}</h3>
@@ -17,6 +18,7 @@ const Movie = ({id, title, year, summary, poster, genres}) => {
                 </ul>
                 <p className='movie_summary'>{summary.slice(0,180)}</p>
             </div>
+            </Link>
         </div>
     );
 };
